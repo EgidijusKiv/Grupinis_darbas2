@@ -34,7 +34,7 @@ app.listen(PORT, () => {
 });
 // //////////////////////////////////////////////////////
 
-app.get('/users', (req, res) => {
+app.get('/memberships', (req, res) => {
   client.connect(async () => {
     const collection = client.db(DB_NAME).collection(USERS_COLLECTION);
     const result = await collection.find({}).toArray();
@@ -44,7 +44,7 @@ app.get('/users', (req, res) => {
   });
 });
 
-app.get('/services', (req, res) => {
+app.get('/users/:order', (req, res) => {
   client.connect(async () => {
     const collection = client.db(DB_NAME).collection(SERVICES_COLLECTION);
     const result = await collection.find({}).toArray();
