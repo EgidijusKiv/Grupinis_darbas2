@@ -1,10 +1,19 @@
-async function fetchCount() {
-  const result = await fetch('http://127.0.0.1:9000/memberships');
+async function fetchMembership() {
+  const result = await fetch(
+    'http://127.0.0.1:9000/memberships',
+    {
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        'Content-type': 'application/json',
+      },
+    },
+  );
   const json = await result.json();
   createCards(json);
 }
 
-fetchCount();
+fetchMembership();
 
 function createCards(objects) {
   console.log(objects);

@@ -11,7 +11,7 @@ const {
 const {
   MongoClient,
   ServerApiVersion,
-  // ObjectId,
+  ObjectId,
 } = require('mongodb');
 
 const client = new MongoClient(DB_URI, {
@@ -26,7 +26,7 @@ const cors = require('cors');
 const app = express();
 
 app.use(express.json());
-// app.use(express.static('public'));
+app.use(express.static('Front-End'));
 app.use(cors());
 
 app.listen(PORT, () => {
@@ -36,20 +36,48 @@ app.listen(PORT, () => {
 
 app.get('/memberships', (req, res) => {
   client.connect(async () => {
-    const collection = client.db(DB_NAME).collection(USERS_COLLECTION);
+    const collection = client.db(DB_NAME).collection(SERVICES_COLLECTION);
     const result = await collection.find({}).toArray();
-    // console.log(result)
     client.close();
     res.json(result);
   });
 });
 
-app.get('/users/:order', (req, res) => {
+app.post('/memberships', (req, res) => {
+  const newMembership = req.body;
   client.connect(async () => {
     const collection = client.db(DB_NAME).collection(SERVICES_COLLECTION);
-    const result = await collection.find({}).toArray();
-    // console.log(result)
+    const result = await collection.insertOne({ ...newMembership });
+    res.json(result);
     client.close();
-    res.send(result);
+  });
+});
+
+app.delete('/memberships/:id', (req, res) => {
+  client.connect(async () => {
+    const collection = client.db(DB_NAME).collection(SERVICES_COLLECTION);
+    const result = await collection.deleteOne({ _id: ObjectId(req.params.id) });
+    res.json(result);
+    client.close();
+  });
+});
+
+app.get('/users/:order', (req, res) => {
+  const order = Number(req.params.order);
+  client.connect(async () => {
+    const collection = client.db(DB_NAME).collection(USERS_COLLECTION);
+    const result = await collection.find({ service_id: order }).toArray();
+    client.close();
+    res.json(result);
+  });
+});
+
+app.post('/users', (req, res) => {
+  const newUser = req.body;
+  client.connect(async () => {
+    const collection = client.db(DB_NAME).collection(USERS_COLLECTION);
+    const result = await collection.insertOne({ ...newUser });
+    res.json(result);
+    client.close();
   });
 });

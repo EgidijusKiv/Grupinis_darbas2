@@ -1,0 +1,40 @@
+* {
+    font-family: "Merriweather Sans", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        box-sizing: border-box;
+}
+body {
+    background: rgba(236,241,245,255);
+    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
+    width:100%
+    }
+
+.membership_Management {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 20px;
+    height: 50px;
+      
+}
+
+.membership_class {
+    width: 90%;
+    align-items: center;
+    background-color: rgba(236,241,245,255);  
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px
+   }
+
+.member_card {
+    background-color: white;
+    height: auto;
+    margin: 10px;
+    box-shadow: 1px 1px 32px -3px rgba(0,0,0,0.63);
+    
+    }
+button {
+        position: relative;
+        float: right;
+      }
+
