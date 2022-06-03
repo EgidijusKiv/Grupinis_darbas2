@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Management</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="frontend.js" defer></script>
+</head>
+
+<body>
+
+    <div class="title">
+        <p class="members">Memberships</p>
+        <p class="users">Users</p>
+    </div>
+    </div>
+
+    <main class="page">
+        <section class="membership-management interface">
+            <div class="page-title">
+                <p>
+                <h3>Membership Management</h3>
+                </p>
+                <a href="">+ New Membership</a>
+            </div>
+            <p>Here you can manage your membership packages.Note: Make sure you not deleting or deactivating packages
+                assigned to active users</p>
+            <div class="card-holder">
+                <div class="membership_card card">
+                    <H2>$2.20 Silver</H2>
+                    <p class="how_long"> This is 7 days basic membership</p>
+                    <hr>
+                    <button class="delete_member"> delete</button>
+                </div>
+                <div class="membership_card card">
+                    <H2>$2.20 Silver</H2>
+                    <p class="how_long"> This is 7 days basic membership</p>
+                    <hr>
+                    <button class="delete_member"> delete</button>
+                </div>
+                <div class="membership_card card">
+                    <H2>$2.20 Silver</H2>
+                    <p class="how_long"> This is 7 days basic membership</p>
+                    <hr>
+                    <button class="delete_member"> delete</button>
+                </div>
+                <div class="membership_card card">
+                    <H2>$2.20 Silver</H2>
+                    <p class="how_long"> This is 7 days basic membership</p>
+                    <hr>
+                    <button class="delete_member"> delete</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="create-membership interface">
+            <div class="page-title">
+                <p>
+                <h3>Create Membership</h3>
+                </p>
+            </div>
+
+            <div class="form-holder">
+                <form class="form" id="memberForm">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" placeholder="Name" ><br>
+
+                    <label for="price"> Membership price</label><br>
+                    <input type="text" id="price" placeholder="Membership price"><br>
+
+                    <label for="description"> Description</label><br>
+                    <input type="text" id="description"><br>
+
+                    <input class="cancel" id="mcancel" type="submit" value="Cancel"></input>
+                    <input class="add-new" id="newmemb" type="submit" value="New Membership"></input>
+                </form>
+            </div>
+        </section>
+
+        <section class="user-management interface">
+            <div class="page-title">
+                <p>
+                <h3>User Management</h3>
+                </p>
+                <p><a href="">+ New User</a></p>
+            </div>
+            <p>
+            <h4>Sorting By Name: <a href=""></a></h4>
+            </p>
+            <div class="card-holder">
+                <div class="user_card card">
+                    <H4>Name Lastname</H4>
+                    <p>Email Address: <a href="">name@mail.com</a></p>
+                    <p>Membership: Platinum</p>
+                    <p>ip: 78.20.42.19</p>
+                </div>
+                <div class="user_card card">
+                    <H4>Name Lastname</H4>
+                    <p>Email Address: <a href="">name@mail.com</a></p>
+                    <p>Membership: Platinum</p>
+                    <p>ip: 78.20.42.19</p>
+                </div>
+                <div class="user_card card">
+                    <H4>Name Lastname</H4>
+                    <p>Email Address: <a href="">name@mail.com</a></p>
+                    <p>Membership: Platinum</p>
+                    <p>ip: 78.20.42.19</p>
+                </div>
+                <div class="user_card card">
+                    <H4>Name Lastname</H4>
+                    <p>Email Address: <a href="">name@mail.com</a></p>
+                    <p>Membership: Platinum</p>
+                    <p>ip: 78.20.42.19</p>
+                </div>
+                <div class="user_card card">
+                    <H4>Name Lastname</H4>
+                    <p>Email Address: <a href="">name@mail.com</a></p>
+                    <p>Membership: Platinum</p>
+                    <p>ip: 78.20.42.19</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="create-user interface">
+            <div class="page-title">
+                <p>
+                <h3>Create User</h3>
+            </div>
+
+            <div class="create-user form">
+                <form class="form" id="userForm">
+                    <label for="fname">First Name *</label><br>
+                    <input type="text" id="fname" placeholder="Name"><br>
+
+                    <label for="lname"> Last Name *</label><br>
+                    <input type="text" id="lname" placeholder="Last Name"><br>
+
+                    <label for="email"> Email Address *</label><br>
+                    <input type="email" id="email" placeholder="Email Address"><br>
+
+                    <label for="membership"> Change Membership</label><br>
+                    <select id="membership">
+                        <option value="Trial">Trial</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Bronze">Bronze</option>
+                        <option value="Gold">Gold</option>
+                        <option value="Platinum">Platinum</option>
+                    </select><br>
+                    <input class="cancel" id="usercancel" type="submit" value="Cancel"></input>
+                    <input class="add-new" id="usernew" type="submit" value="New User"></input>
+                </form>
+            </div>
+        </section>
+
+
+        <footer class="membership_footer">
+            <h4>Copyright Ⓒ2021 Membership Manager </h4>
+        </footer>
+
+
+
+    </main>
+
+
+
+
+
+</body>
+
+</html>
