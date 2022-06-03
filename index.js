@@ -37,9 +37,12 @@ app.listen(PORT, () => {
 app.get('/memberships', (req, res) => {
   client.connect(async () => {
     const collection = client.db(DB_NAME).collection(SERVICES_COLLECTION);
-    const result = await collection.find({}).toArray();
+    const responce = await collection
+      .find({})
+      .toArray();
     client.close();
-    res.json(result);
+    const result2 = responce.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+    res.json(result2);
   });
 });
 
@@ -57,8 +60,8 @@ app.delete('/memberships/:id', (req, res) => {
   client.connect(async () => {
     const collection = client.db(DB_NAME).collection(SERVICES_COLLECTION);
     const result = await collection.deleteOne({ _id: ObjectId(req.params.id) });
-    res.json(result);
     client.close();
+    res.json(result);
   });
 });
 

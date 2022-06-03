@@ -12,11 +12,19 @@ async function fetchMembership() {
   const json = await result.json();
   // console.log(json);
   createCards(json);
+
+  document.querySelectorAll('.delete_member').forEach((el) => {
+    el.addEventListener('click', () => {
+      console.log(el.value);
+      deleteCard(el.value);
+      window.location.reload();
+    });
+  });
 }
 fetchMembership();
 
 function createCards(objects) {
-  console.log(objects);
+  // console.log(objects);
   objects.forEach((element) => {
     const {
       _id, price, name, description,
@@ -41,8 +49,12 @@ function createCards(objects) {
   });
 }
 
-document.querySelectorAll('.delete_member').forEach((el) => {
-  el.addEventListener('click', () => {
-    console.log(el);
+function deleteCard(id) {
+  return fetch(`http://127.0.0.1:9000/memberships/${id}`, {
+    method: 'DELETE',
   });
+}
+
+document.querySelector('header a').addEventListener('click', () => {
+  window.location.replace('http://127.0.0.1:9000/membership/addmembership.html');
 });
