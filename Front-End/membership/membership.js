@@ -55,6 +55,14 @@ function deleteCard(id) {
   });
 }
 
-document.querySelector('header a').addEventListener('click', () => {
+document.getElementById('newmembership').addEventListener('click', () => {
   window.location.replace('http://127.0.0.1:9000/membership/addmembership.html');
+});
+
+document.getElementById('memberships').addEventListener('click', () => {
+  window.location.replace('http://127.0.0.1:9000/membership/membership.html');
+});
+
+document.getElementById('users').addEventListener('click', () => {
+  window.location.replace('http://127.0.0.1:9000/users/users.html');
 });

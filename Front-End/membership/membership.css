@@ -37,4 +37,12 @@ button {
         position: relative;
         float: right;
       }
+.title {
+    display: flex;
+    justify-content: space-around;
+
+}
+.title a {
+    margin: 20px;
+    }
 
