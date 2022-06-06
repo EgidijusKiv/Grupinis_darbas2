@@ -65,13 +65,17 @@ app.delete('/memberships/:id', (req, res) => {
   });
 });
 
-app.get('/users/:order', (req, res) => {
-  const order = Number(req.params.order);
+app.get('/users', (req, res) => {
+  // const order = Number(req.params.order);
   client.connect(async () => {
     const collection = client.db(DB_NAME).collection(USERS_COLLECTION);
-    const result = await collection.find({ service_id: order }).toArray();
+    const result = await collection.find({}).toArray();
+    const collection2 = client.db(DB_NAME).collection(SERVICES_COLLECTION);
+    const result2 = await collection2.find({}).toArray();
+
+    const usersWithMembershipts = result.map((user) => ({ ...user, membership: result2.find((e) => e.name === user.service_id) }));
     client.close();
-    res.json(result);
+    res.json(usersWithMembershipts);
   });
 });
 

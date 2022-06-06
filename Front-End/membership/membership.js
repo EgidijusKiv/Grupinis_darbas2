@@ -14,10 +14,11 @@ async function fetchMembership() {
   createCards(json);
 
   document.querySelectorAll('.delete_member').forEach((el) => {
-    el.addEventListener('click', () => {
-      console.log(el.value);
-      deleteCard(el.value);
-      window.location.reload();
+    el.addEventListener('click', async () => {
+      // console.log(el);
+      await deleteCard(el.value);
+      el.closest('.member_card').remove();
+      // window.location.replace('http://127.0.0.1:9000/membership/membership.html');
     });
   });
 }
