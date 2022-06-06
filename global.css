@@ -1,0 +1,115 @@
+body {
+    height: 100vh;
+    font-family: Helvetica, sans-serif;
+}
+
+.content-area {
+    background-color: azure;
+    height: 100vh;
+}
+
+.link {
+    color: dodgerblue;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0 16px;
+}
+
+.navigation {
+    padding: 30px 20px 10px;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.mr-8 {
+    margin-right: 8px;
+}
+
+.mr-16 {
+    margin-right: 16px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.pt-16 {
+    padding-top: 16px;
+}
+
+.mt-48 {
+    margin-top: 48px;
+}
+
+.btn {
+    padding: 12px 28px;
+    background-color: #069ce5;
+    color: #ffffff;
+    border: none;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.input-two-col {
+    width: 50%;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+}
+
+.color-red {
+    color: red;
+}
+
+.form-wrapper {
+    padding: 30px;
+}
+
+form label {
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type=text],
+input[type=number],
+select {
+    height: 36px;
+    background: none;
+    border: 1px solid #7b7b7b;
+    padding: 0 0 0 11px;
+}
+select {
+    width: 100%;
+}
