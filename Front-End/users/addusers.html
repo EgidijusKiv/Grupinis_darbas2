@@ -10,53 +10,28 @@
     <link rel="stylesheet" href="/users/addusers.css">
     <script src="/users/addusers.js" defer></script>
 </head>
-<body>
-    <header class="membership_Management">
-        <div class="title">
-            <div id="memberships"><a href="#">Memberships</a></div>
-            <div id="users"><a href="#">Users</a></div>
-        </div>
-    <!-- <div class="links d-flex justify-center navigation">
-        <a href="/CreateMembership.html" class="link">Memberships</a>
-        <a href="#" class="link">Users</a>
-    </div> -->
-    <div class="content-area">
-        <div class="container">
-            <h1 class="links d-flex pt-16">Create User</h1>
-        </div>
-        <div class="container">
-            <form class="d-flex bg-white form-wrapper">
-                <div class="w-100">
-                    <div class="d-flex justify-between">
-                        <div class="mb-16 w-100 mr-16">
-                            <label for="fname">First Name <span class="color-red">*</span></label>
-                            <input type="text" id="fname" name="fname" placeholder="Name" class="w-100">
-                        </div>
-                        <div class="mb-16 w-100">
-                            <label for="lname">Last name <span class="color-red">*</span></label>
-                            <input type="text" id="lname" name="lname" placeholder="Last Name" class="w-100">
-                        </div>
-                    </div>
-                    <div class="mb-16 w-50">
-                        <label for="lname">Email:</label>
-                        <input type="text" id="eaddress" name="eaddress" placeholder="Email Address" class="w-100">
-                    </div>
-                    <div class="w-50">
-                        <label>Change Membership</label>
-                        <select name="memebership" id="memebership" class="mb-16">
-                            <option value="Trial">Trial</option>
-                            <option value="Bronze">Bronze</option>
-                            <option value="Platinum">Platinum</option>
-                        </select>
-                    </div>
 
-                    <div class="d-flex justify-center mb-16 mt-48">
-                        <input id="cancel" type="button" value="Cancel" class="btn mr-8">
-                        <input id="newuser" type="submit" value="New User" class="btn">
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+<body>
+    <h2>Create User:</h2>
+    <form>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="User name">
+        <label for="lname">Last name </label>
+        <input type="text" id="lname" name="lname" placeholder="Last Name">
+        <label for="eaddress">Email:</label>
+        <input type="text" id="eaddress" name="eaddress" placeholder="Email Address">
+        
+        <label>Change Membership</label>
+        <select name="memebership" id="memebership" class="mb-16">
+            <option value="Trial">Trial</option>
+            <option value="Bronze">Bronze</option>
+            <option value="Platinum">Platinum</option>
+        </select>  
+        <div>
+            <input id="cancel" type="button" value="Cancel" class="cancel">
+            <input id="newuser" type="submit" value="New User" class="newuser">
+        </div> 
+      </form> 
+
 </body>
 </html>

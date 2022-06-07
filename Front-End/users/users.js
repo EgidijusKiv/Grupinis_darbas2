@@ -41,7 +41,7 @@ function createUserCards(objects) {
   // console.log(objects);
   objects.forEach((element) => {
     const {
-      _id, name, surname, email, service_id,
+      name, surname, email, service_id,
     } = element;
 
     const main = document.querySelector('.card-holder');

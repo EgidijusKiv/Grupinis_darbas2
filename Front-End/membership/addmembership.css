@@ -1,3 +1,65 @@
-body{
-    background-color: lightgray;
+* {
+    font-family: "Merriweather Sans", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(236, 241, 245, 255);
+    width: 100%
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+form label {
+    font-weight: 500;
+}
+
+form input {
+    padding: 10px;
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+form div input {
+    margin: 10px;
+}
+
+.cancel_button {
+    border: none;
+    font-weight: bold;
+}
+
+.cancel_button:hover {
+    color: red;
+}
+
+.new_membership {
+    background-color: rgb(106, 106, 212);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    align-self: center;
+    text-decoration: none;
+    font-weight: bold;
+    /* display: flex; */
+    margin-right: 20px;
+}
+
+.new_membership:hover {
+    color: rgb(106, 106, 212);
+    background-color: rgba(236, 241, 245, 255);
+    border: solid 2px;
+    border-color: red;
 }

@@ -9,15 +9,19 @@
     <script src="/membership/addmemebership.js" defer></script>
 </head>
 <body>
+    <h2>Create Membership:</h2>
     <form>
-        <label for="name">Name:</label><br>
+        <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Package name"> <br>
-        <label for="lname">Membership Price:</label><br>
+        <label for="lname">Membership Price:</label>
         <input type="number" id="price" name="price" placeholder="00.00"><br><br>
-        <label for="comment">Description:</label><br>
+        <label for="comment">Description:</label>
         <textarea name="comment" placeholder="Enter text here..."></textarea><br>
-        <input class="cancel_button" type="button" value="Cancel">
+        <div>
+                    <input class="cancel_button" type="button" value="Cancel">
         <input class="new_membership" type="submit" value="New Membership">
+        </div>
+
 
       </form> 
 </body>
