@@ -48,32 +48,19 @@ async function fetchMemberships() {
   );
   const json = await result.json();
   console.log(json);
-  // createMembershipsList(json)
+  createMembershipsList(json);
 }
 fetchMemberships();
 
 function createMembershipsList(objects) {
   objects.forEach((element) => {
     const membershipName = element.name;
-    // const {
-    //   _id, price, name, description,
-    // } = element;
-    // const main = document.querySelector('main');
-    // const div = document.createElement('div');
-    // const h2 = document.createElement('h2');
-    // const span = document.createElement('span');
-    // const hr = document.createElement('hr');
-    // const button = document.createElement('button');
+    console.log(membershipName);
 
-    // div.className = 'member_card';
-    // span.className = 'how_long';
-    // button.className = 'delete_member';
-    // button.value = _id;
+    const main = document.getElementById('memebership');
+    const option = document.createElement('option');
 
-    // main.appendChild(div);
-    // div.appendChild(h2).innerText = `$${price} ${name}`;
-    // div.appendChild(span).innerText = description;
-    // div.appendChild(hr);
-    // div.appendChild(button).innerText = 'Delete';
+    option.value = membershipName;
+    main.appendChild(option).innerText = membershipName;
   });
 }

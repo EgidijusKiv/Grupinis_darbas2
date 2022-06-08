@@ -25,14 +25,6 @@ async function fetchUsers() {
   console.log(json);
   // console.log(json);
   createUserCards(json);
-
-//   document.querySelectorAll('.delete_member').forEach((el) => {
-//     el.addEventListener('click', () => {
-//       console.log(el.value);
-//       deleteCard(el.value);
-//       window.location.reload();
-//     });
-//   });
 }
 
 fetchUsers();
@@ -50,19 +42,13 @@ function createUserCards(objects) {
     const pEmail = document.createElement('p');
     const pMembership = document.createElement('p');
     const pIp = document.createElement('p');
-
-    // const hr = document.createElement('hr');
-    // const button = document.createElement('button');
-
+    const createIP = `IP: 78.${new Date().getHours()}.${new Date().getSeconds()}.${new Date().getMinutes()}`;
     div.className = 'user_card card';
-    // span.className = 'how_long';
-    // button.className = 'delete_member';
-    // button.value = _id;
 
     main.appendChild(div);
     div.appendChild(h4).innerText = `${name} ${surname}`;
     div.appendChild(pEmail).innerText = `Email Address: ${email}`;
     div.appendChild(pMembership).innerText = `Membership: ${service_id}`;
-    div.appendChild(pIp).innerText = 'ip: 78.20.42.19';
+    div.appendChild(pIp).innerText = createIP;
   });
 }

@@ -61,14 +61,17 @@ nav div {
 }
 
 nav div a {
-    color: blue;
+    color: lightskyblue;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav div a:hover {
-    color: lightskyblue;
+    color: blue;
+}
+nav .current {
+    color: blue;
 }
 
 .membership_Management {
