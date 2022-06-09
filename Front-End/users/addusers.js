@@ -60,7 +60,7 @@ function createMembershipsList(objects) {
     const main = document.getElementById('memebership');
     const option = document.createElement('option');
 
-    option.value = membershipName;
-    main.appendChild(option).innerText = membershipName;
+    option.value = membershipName; // element._id.
+    main.appendChild(option).innerText = membershipName; // option.text = element.name
   });
 }

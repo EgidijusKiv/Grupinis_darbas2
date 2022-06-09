@@ -73,7 +73,7 @@ app.get('/users', (req, res) => {
     const collection2 = client.db(DB_NAME).collection(SERVICES_COLLECTION);
     const result2 = await collection2.find({}).toArray();
 
-    const usersWithMembershipts = result.map((user) => ({ ...user, membership: result2.find((e) => e.name === user.service_id) }));
+    const usersWithMembershipts = result.map((user) => ({ ...user, membership: result2.find((e) => e.name === user.service_id) })); // e._id.equals(user.service_id)
     client.close();
     res.json(usersWithMembershipts);
   });
