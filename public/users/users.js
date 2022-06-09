@@ -1,5 +1,5 @@
 document.getElementById('memberships').addEventListener('click', () => {
-  window.location.replace('http://127.0.0.1:9000/membership/membership.html');
+  window.location.replace('http://127.0.0.1:9000');
 });
 
 document.getElementById('users').addEventListener('click', () => {
