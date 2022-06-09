@@ -1,5 +1,5 @@
 document.querySelector('.cancel_button').addEventListener('click', () => {
-  window.location.replace('http://127.0.0.1:9000/membership/membership.html');
+  window.location.replace('http://127.0.0.1:9000');
 });
 let membershipData = {};
 document.querySelector('.new_membership').addEventListener('click', (e) => {
@@ -28,6 +28,6 @@ async function fetchNewMembership() {
       body: JSON.stringify(membershipData),
     },
   );
-  window.location.replace('http://127.0.0.1:9000/membership/membership.html');
+  window.location.replace('http://127.0.0.1:9000');
   return result.json();
 }

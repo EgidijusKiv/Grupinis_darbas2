@@ -5,7 +5,6 @@
 
 body {
     background: rgba(236, 241, 245, 255);
-    /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
     width: 100%
 }
 
@@ -102,4 +101,62 @@ nav .current {
 
 p {
     margin-top: 0%;
+}
+
+/* Users aprasas */
+
+.interface {
+    width: 80%;
+    margin: auto;
+    padding-top: 10px
+}
+
+.card-holder {
+    width: 90%;
+    align-items: center;
+    background-color: rgba(236, 241, 245, 255);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5px
+}
+
+.card-holder h4 {
+    margin-top: 0;
+    margin-bottom: 20%;
+    color: rgb(127, 127, 252);
+}
+
+.card {
+    background-color: white;
+    justify-items: center;
+    align-content: center;
+    padding: 10px;
+    margin: 5px;
+    width: auto;
+}
+
+.users_Management {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.users_Management div a {
+    background-color: rgb(106, 106, 212);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    align-self: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    margin-right: 20px;
+}
+
+.users_Management div a:hover {
+    color: rgb(106, 106, 212);
+    background-color: rgba(236, 241, 245, 255);
+    border: solid 2px;
+    border-color: red;
 }
